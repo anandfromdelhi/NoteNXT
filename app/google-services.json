@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "735358035687",
+    "project_id": "notenxt",
+    "storage_bucket": "notenxt.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:735358035687:android:8d406af366cdf37ae72442",
+        "android_client_info": {
+          "package_name": "com.example.notenxt"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "735358035687-qm574dhes8b345gc51c07pkqmnh6au91.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCcHmTp-o88CUMq1DJpj08RkI69enArXPs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "735358035687-qm574dhes8b345gc51c07pkqmnh6au91.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
