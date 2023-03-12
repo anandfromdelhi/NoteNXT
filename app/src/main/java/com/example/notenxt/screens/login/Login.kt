@@ -72,10 +72,13 @@ fun LoginScreen(
             visualTransformation = PasswordVisualTransformation(),
             isError = isError
         )
+
         Button(onClick = { loginViewModel?.loginUser(context) }) {
             Text(text = "Sign In")
         }
+
         Spacer(modifier = Modifier.height(16.dp))
+
         Row(
             modifier = Modifier.fillMaxWidth(),
             horizontalArrangement = Arrangement.Center

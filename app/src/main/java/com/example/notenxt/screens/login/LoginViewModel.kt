@@ -23,20 +23,20 @@ class LoginViewModel(
         loginUiState = loginUiState.copy(username = userName)
     }
 
-    fun onPasswordNameChange(userName: String) {
-        loginUiState = loginUiState.copy(username = userName)
+    fun onPasswordNameChange(password: String) {
+        loginUiState = loginUiState.copy(password = password)
     }
 
-    fun onUserNameChangeSignUp(userName: String) {
-        loginUiState = loginUiState.copy(username = userName)
+    fun onUserNameChangeSignUp(usernameSignUp: String) {
+        loginUiState = loginUiState.copy(usernameSignUp = usernameSignUp)
     }
 
-    fun onPasswordChangeSignUp(password: String) {
-        loginUiState = loginUiState.copy(passwordSignUp = password)
+    fun onPasswordChangeSignUp(passwordSignUp: String) {
+        loginUiState = loginUiState.copy(passwordSignUp = passwordSignUp)
     }
 
-    fun onConfirmPasswordChange(password: String) {
-        loginUiState = loginUiState.copy(confirmPasswordSignUp = password)
+    fun onConfirmPasswordChange(confirmPasswordSignUp: String) {
+        loginUiState = loginUiState.copy(confirmPasswordSignUp = confirmPasswordSignUp)
     }
 
     private fun validateLoginForm() =

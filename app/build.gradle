@@ -84,14 +84,14 @@ dependencies {
     implementation "androidx.room:room-ktx:2.5.0"
 
     //viewmodel
-    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.0"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1"
 
     //work
     implementation "androidx.work:work-runtime-ktx:2.8.0"
 
     //coroutines
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4'
-    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.0"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1"
 
     //Json converter
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
@@ -113,10 +113,6 @@ dependencies {
     implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
     implementation "androidx.navigation:navigation-compose:$nav_version"
 
-
-    kapt "com.google.dagger:hilt-compiler:2.44.2"
-
-
     // Import the BoM for the Firebase platform
     implementation platform('com.google.firebase:firebase-bom:31.2.3')
 
@@ -125,6 +121,10 @@ dependencies {
     implementation 'com.google.firebase:firebase-auth'
     implementation 'com.google.firebase:firebase-firestore'
 
+
+
+
+    kapt "com.google.dagger:hilt-compiler:2.44.2"
 }
 
 kapt {
