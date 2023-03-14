@@ -14,7 +14,7 @@ import kotlinx.coroutines.flow.callbackFlow
 const val NOTES_COLLECTION_REF = "notes"
 
 class StorageRepository() {
-    val user = Firebase.auth.currentUser
+    fun user() = Firebase.auth.currentUser
     fun hasUser(): Boolean = Firebase.auth.currentUser != null
 
     fun getUserId(): String = Firebase.auth.currentUser?.uid.orEmpty()
@@ -106,6 +106,8 @@ class StorageRepository() {
             onResult(it.isSuccessful)
         }
     }
+
+    fun signOut() = Firebase.auth.signOut()
 }
 
 sealed class Resources<T>(
