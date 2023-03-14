@@ -61,7 +61,9 @@ fun Navigation(
         }
 
         composable(route = HomeRoutes.Home.name){
-            Home()
+            Home(homeViewModel = null, onNoteClick = {}, navToDetailPage = { /*TODO*/ }) {
+
+            }
         }
 
     }

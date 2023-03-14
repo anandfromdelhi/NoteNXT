@@ -19,6 +19,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import com.example.notenxt.utils.Utils
+import kotlinx.coroutines.launch
 
 @Composable
 fun DetailScreen(
@@ -67,6 +68,7 @@ fun DetailScreen(
                 .padding(paddingValues)
         ) {
             if (detailUiState.noteAddedStatus) {
+
                 Toast.makeText(
                     LocalContext.current, "Note added successfully",
                     Toast.LENGTH_SHORT
@@ -78,6 +80,7 @@ fun DetailScreen(
 
             }
             if (detailUiState.updateNoteStatus) {
+
                 Toast.makeText(
                     LocalContext.current, "Note updated successfully",
                     Toast.LENGTH_SHORT
@@ -113,7 +116,10 @@ fun DetailScreen(
                     detailViewModel?.onNoteChange(it)
                 },
                 label = { Text(text = "Notes") },
-                modifier = Modifier.fillMaxWidth().weight(1f).padding(8.dp)
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .weight(1f)
+                    .padding(8.dp)
             )
 
         }
