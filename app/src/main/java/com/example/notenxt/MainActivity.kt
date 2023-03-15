@@ -9,6 +9,8 @@ import androidx.compose.material.Surface
 import androidx.compose.ui.Modifier
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.notenxt.navigation.Navigation
+import com.example.notenxt.screens.detail.DetailViewModel
+import com.example.notenxt.screens.home.HomeViewModel
 import com.example.notenxt.screens.login.LoginScreen
 import com.example.notenxt.screens.login.LoginViewModel
 import com.example.notenxt.ui.theme.NoteNXTTheme
@@ -21,12 +23,18 @@ class MainActivity : ComponentActivity() {
         setContent {
             NoteNXTTheme {
                 val loginViewModel = viewModel(modelClass = LoginViewModel::class.java)
-                // A surface container using the 'background' color from the theme
+                val homeViewModel = viewModel(modelClass = HomeViewModel::class.java)
+                val detailViewModel = viewModel(modelClass = DetailViewModel::class.java)
+
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    Navigation(loginViewModel = loginViewModel)
+                    Navigation(
+                        loginViewModel = loginViewModel,
+                        detailViewModel = detailViewModel,
+                        homeViewModel = homeViewModel
+                    )
                 }
             }
         }

@@ -130,6 +130,11 @@ fun Home(
         }
 
     }
+    LaunchedEffect(key1 = homeViewModel?.hasUser){
+        if (homeViewModel?.hasUser == false){
+            navToLoginPage.invoke()
+        }
+    }
 }
 
 @OptIn(ExperimentalFoundationApi::class)

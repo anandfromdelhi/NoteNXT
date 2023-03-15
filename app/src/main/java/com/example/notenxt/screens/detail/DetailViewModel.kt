@@ -10,7 +10,7 @@ import com.google.firebase.Timestamp
 import com.google.firebase.auth.FirebaseUser
 
 class DetailViewModel(
-    private val repository: StorageRepository
+    private val repository: StorageRepository = StorageRepository()
 ) : ViewModel() {
     var detailUiState by mutableStateOf(DetailUiState())
         private set
